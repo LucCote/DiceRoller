@@ -30,7 +30,7 @@ $(document).ready(function(){
 			}
 		}
 		}else{
-			Alert("you can only roll up to 500 dice");
+			alert("you can only roll up to 500 dice");
 		}
 		if(number[0] == 1){
 		   dicePic.src = "http://anjinhyu.is2.byuh.edu/cis101.2112/100/1.png";
