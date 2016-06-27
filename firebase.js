@@ -5,3 +5,4 @@ var config = {
 	    storageBucket: "diceroller-f0a1a.appspot.com",
 	  };
 	  firebase.initializeApp(config);
+	  firebase.auth();
