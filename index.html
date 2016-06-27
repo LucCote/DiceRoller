@@ -1,0 +1,68 @@
+<html>
+<head>
+	<style>
+		body{
+		text-align: center;
+		background: gray;
+		}
+		#dice{
+			width:200px;
+			height:200px;
+		}
+		#roller{
+			width:200px;
+			height:50px;
+			background: red;
+		}
+		#title{
+			font-size:40;
+			color:blue;
+		}
+		#outcome{
+			font-size:60;
+			color:red;
+		}#text1{
+			font-size:40;
+			color: red;
+		}#txt2{
+			font-size:20;
+			color: yellow;
+		}#recentrolls{
+			font-size:20;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1 id="title">Risk Dice Simulator</h1>
+	<img id="dice" src="http://www.clipartbest.com/cliparts/9c4/end/9c4endxoi.png"></img>
+	<p id="text1" ></p>
+	<p id="outcome"></p>
+	<!-- <button id="roller">Roll Dice</button> -->
+	<form id="inputs">
+  		Name:<br>
+  		<input type="text" name="Name"><br>
+  		Number of Dice:<br>
+  		<input type="number" name="dicenumber"><br><br>
+  		<input type="submit" value="Roll">
+	</form>
+	<p id="txt2">Recent Roll:</p>
+	<p id="recentrolls"></p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDtO-Gz6MDt5BvbmdfqSOtpMwYIuBNLoIA",
+	    authDomain: "diceroller-f0a1a.firebaseapp.com",
+	    databaseURL: "https://diceroller-f0a1a.firebaseio.com",
+	    storageBucket: "diceroller-f0a1a.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="diceroll.js"></script>
+</div>
+</body>
+</html>
