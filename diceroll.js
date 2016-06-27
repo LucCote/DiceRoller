@@ -16,7 +16,7 @@ $(document).ready(function(){
 	visits.on("value", function(snapshot){
 		vn = snapshot.val();
 	});
-	vn = vn+1;
+	vn = valueOf(vn)+1;
 	console.log(vn);
 	visits.set(vn);
 	dicePic = new Image(200,200);
