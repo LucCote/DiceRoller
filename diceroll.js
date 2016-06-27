@@ -18,9 +18,9 @@ $(document).ready(function(){
 		e.preventDefault();
 		form = document.forms[0];
 		rolls = form.elements["dicenumber"].value;
-		number= new Array(rolls);
-		ns = new Array(rolls);
-		if (rolls < 501){
+		if(rolls < 501){
+			number= new Array(rolls);
+			ns = new Array(rolls);
 			for (var x=0; x<rolls; x++){
 			number[x] = Math.floor((Math.random()*6)+1);
 			if (x<rolls-1){
@@ -28,10 +28,7 @@ $(document).ready(function(){
 			}else {
 				ns[x]=number[x];
 			}
-		}
-		}else{
-			alert("you can only roll up to 500 dice");
-		}
+			}
 		if(number[0] == 1){
 		   dicePic.src = "http://anjinhyu.is2.byuh.edu/cis101.2112/100/1.png";
 		}else if(number[0] == 2){
@@ -50,5 +47,8 @@ $(document).ready(function(){
 		$("#dice").attr("src", dicePic.src);
 		person = form.elements["Name"].value;
 		list.set(person+": "+number);
+		}else{
+			alert("you can only roll up to 500 dice");
+		}
 	});
 });
