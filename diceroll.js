@@ -20,13 +20,17 @@ $(document).ready(function(){
 		rolls = form.elements["dicenumber"].value;
 		number= new Array(rolls);
 		ns = new Array(rolls);
-		for (var x=0; x<rolls; x++){
+		if (rolls < 501){
+			for (var x=0; x<rolls; x++){
 			number[x] = Math.floor((Math.random()*6)+1);
 			if (x<rolls-1){
 				ns[x]=number[x] + ", ";
 			}else {
 				ns[x]=number[x];
 			}
+		}
+		}else{
+			Alert("you can only roll up to 500 dice");
 		}
 		if(number[0] == 1){
 		   dicePic.src = "http://anjinhyu.is2.byuh.edu/cis101.2112/100/1.png";
