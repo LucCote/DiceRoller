@@ -7,12 +7,18 @@ var person;
 var ref = new Firebase("https://diceroller-f0a1a.firebaseio.com/rolls");
 var list = ref.child("rolls");
 var visits = ref.child("visits");
+var vn;
 $(document).ready(function(){
 	
 	list.on('value', function(snapshot) {//when value of rolls changes take a snapshot
   			$("#recentrolls").html(snapshot.val());//display value of snapshot
 		});
-	visits.set("visitor");
+	visits.on("value", function(snapshot){
+		vn = snapshot.val();
+	});
+	vn = vn+1;
+	console.log(vn);
+	visits.set(vn);
 	dicePic = new Image(200,200);
 	$("#inputs").submit(function(e){
 		e.preventDefault();
