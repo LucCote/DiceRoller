@@ -13,6 +13,7 @@ $(document).ready(function(){
 	list.on('value', function(snapshot) {//when value of rolls changes take a snapshot
   			$("#recentrolls").html(snapshot.val());//display value of snapshot
 		});
+	visits.set(1);
 	visits.on("value", function(snapshot){
 		vn = snapshot.val();
 	});
