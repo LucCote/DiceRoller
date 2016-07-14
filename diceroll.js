@@ -50,5 +50,6 @@ $(document).ready(function(){
 		}else{
 			alert("you can only roll up to 500 dice");
 		}
+		document.getElementById("#inputs").reset();
 	});
 });
